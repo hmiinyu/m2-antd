@@ -37,8 +37,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var TabBar =
 /*#__PURE__*/
-function (_React$Component) {
-  _inherits(TabBar, _React$Component);
+function (_React$PureComponent) {
+  _inherits(TabBar, _React$PureComponent);
 
   function TabBar() {
     _classCallCheck(this, TabBar);
@@ -65,12 +65,13 @@ function (_React$Component) {
 
       var _this$props = this.props,
           items = _this$props.items,
+          keyField = _this$props.keyField,
           colors = _this$props.colors;
       return _react["default"].createElement("div", {
         className: "tab-bar-container"
       }, items.length ? _react["default"].createElement(_antdMobile.TabBar, colors, items.map(function (item) {
         return _react["default"].createElement(_antdMobile.TabBar.Item, {
-          key: item.key,
+          key: item[keyField],
           title: item.title,
           icon: _this.renderIcon(item.icon),
           selectedIcon: _this.renderIcon(item.selectedIcon),
@@ -84,16 +85,18 @@ function (_React$Component) {
   }]);
 
   return TabBar;
-}(_react["default"].Component);
+}(_react["default"].PureComponent);
 
 exports.TabBar = TabBar;
 
 _defineProperty(TabBar, "propTypes", {
   items: _propTypes["default"].array.isRequired,
+  keyField: _propTypes["default"].string,
   colors: _propTypes["default"].object
 });
 
 _defineProperty(TabBar, "defaultProps", {
+  keyField: 'url',
   colors: {
     unselectedTintColor: '#949494',
     tintColor: '#33a4f4',

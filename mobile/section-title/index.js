@@ -39,8 +39,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var SectionTitle =
 /*#__PURE__*/
-function (_React$Component) {
-  _inherits(SectionTitle, _React$Component);
+function (_React$PureComponent) {
+  _inherits(SectionTitle, _React$PureComponent);
 
   function SectionTitle() {
     _classCallCheck(this, SectionTitle);
@@ -66,7 +66,7 @@ function (_React$Component) {
   }]);
 
   return SectionTitle;
-}(_react["default"].Component);
+}(_react["default"].PureComponent);
 
 exports.SectionTitle = SectionTitle;
 

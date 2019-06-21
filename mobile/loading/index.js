@@ -37,8 +37,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var Loading =
 /*#__PURE__*/
-function (_React$Component) {
-  _inherits(Loading, _React$Component);
+function (_React$PureComponent) {
+  _inherits(Loading, _React$PureComponent);
 
   function Loading() {
     _classCallCheck(this, Loading);
@@ -61,7 +61,7 @@ function (_React$Component) {
   }]);
 
   return Loading;
-}(_react["default"].Component);
+}(_react["default"].PureComponent);
 
 exports.Loading = Loading;
 
@@ -72,5 +72,5 @@ _defineProperty(Loading, "propTypes", {
 
 _defineProperty(Loading, "defaultProps", {
   id: 'indicator',
-  text: '正在加载中'
+  text: '正在加载中...'
 });

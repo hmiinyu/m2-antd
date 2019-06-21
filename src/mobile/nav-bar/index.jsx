@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon, NavBar as _NavBar } from 'antd-mobile';
 
-export class NavBar extends React.Component {
+export class NavBar extends React.PureComponent {
   static propTypes = {
     title: PropTypes.string.isRequired,
     left: PropTypes.object,

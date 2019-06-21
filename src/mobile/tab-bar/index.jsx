@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TabBar as _TabBar } from 'antd-mobile';
 import 'index.less';
 
-export class TabBar extends React.Component {
+export class TabBar extends React.PureComponent {
   static propTypes = {
     items: PropTypes.array.isRequired,
     keyField: PropTypes.string,

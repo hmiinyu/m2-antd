@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { List } from 'antd-mobile';
 import './index.less';
 
-export class SectionTitle extends React.Component {
+export class SectionTitle extends React.PureComponent {
   static propTypes = {
     title: PropTypes.string.isRequired,
     arrow: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),

@@ -35,8 +35,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var NavBar =
 /*#__PURE__*/
-function (_React$Component) {
-  _inherits(NavBar, _React$Component);
+function (_React$PureComponent) {
+  _inherits(NavBar, _React$PureComponent);
 
   function NavBar() {
     _classCallCheck(this, NavBar);
@@ -68,7 +68,7 @@ function (_React$Component) {
   }]);
 
   return NavBar;
-}(_react["default"].Component);
+}(_react["default"].PureComponent);
 
 exports.NavBar = NavBar;
 

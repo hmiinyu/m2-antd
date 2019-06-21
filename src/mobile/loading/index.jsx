@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { ActivityIndicator } from 'antd-mobile';
 
-export class Loading extends React.Component {
+export class Loading extends React.PureComponent {
   static propTypes = {
     id: PropTypes.string,
     text: PropTypes.string
