@@ -1,0 +1,43 @@
+{
+  "name": "m2-antd",
+  "version": "1.0.0",
+  "description": "The package is provided facilities and utilities based on antd and ant-mobile.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hmiinyu/m2-antd.git"
+  },
+  "main": "",
+  "keywords": [
+    "npm",
+    "package",
+    "utilities",
+    "frontend",
+    "framework",
+    "antd",
+    "antd-mobile",
+    "m2-antd"
+  ],
+  "scripts": {
+    "compile-web": "./node_modules/.bin/babel src/web --out-dir web",
+    "compile-mobile": "./node_modules/.bin/babel src/mobile --out-dir mobile",
+    "compile": "yarn compile-web && yarn compile-mobile",
+    "prepublishOnly": "NODE_ENV='publish' yarn compile"
+  },
+  "dependencies": {
+    "antd": "^3.19.6",
+    "antd-mobile": "2.2.13",
+    "m2-core": "^1.1.0",
+    "prop-types": "^15.7.2",
+    "rc-form": "^2.4.6",
+    "react": "16.3.2",
+    "react-dom": "16.4.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.4.4"
+  }
+}
