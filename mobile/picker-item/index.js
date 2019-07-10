@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _index = require("antd-mobile/lib/index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -49,13 +51,13 @@ function (_React$Component) {
           data = _this$props.data,
           field = _this$props.field,
           label = _this$props.label,
+          config = _this$props.config,
           getFieldProps = _this$props.getFieldProps,
           setFieldValue = _this$props.setFieldValue;
       return _react["default"].createElement(_index.Picker, _extends({
         data: data,
         cols: 1
-      }, getFieldProps(field), {
-        className: "forss",
+      }, getFieldProps(field), config, {
         onOk: function onOk(val) {
           return setFieldValue(field, val[0]);
         }
@@ -68,5 +70,13 @@ function (_React$Component) {
   return PickerItem;
 }(_react["default"].Component);
 
+PickerItem.propTypes = {
+  data: _propTypes["default"].array.isRequired,
+  field: _propTypes["default"].string.isRequired,
+  label: _propTypes["default"].string.isRequired,
+  getFieldProps: _propTypes["default"].func.isRequired,
+  setFieldValue: _propTypes["default"].func.isRequired,
+  config: _propTypes["default"].object
+};
 var _default = PickerItem;
 exports["default"] = _default;

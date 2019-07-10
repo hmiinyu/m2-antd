@@ -75,6 +75,44 @@ render({
   ]
 })
 ```
+ - `PickerItem` **class** Render the Picker component for retrieving the single value based on antd-mobile.
+ ####
+ | props | type | description | required | example |
+ | ------------ | ------------ | ------------ | ------------ | ------------ |
+ | data | array | the picker datasource | yes |  |
+ | field | string | the field name of current item  | yes | 'district' |
+ | label | string | the text in the leftside | yes | 'Select District' |
+ | getFieldProps | func | the rc-form getFieldProps method | yes |  |
+ | setFieldValue | func | the rc-form setFieldValue method | yes | |
+ | config | object | the extra options | no |  |
+```js
+ import React from 'react'
+ import { createForm } from 'rc-form'
+ import { Button } from 'antd-mobile'
+ import { PickerItem } from 'm2-antd/mobile' /* 待发布(可用其他空间代替) */
+ import { initialFormComponent } from 'm2-react'
+ import { district } from 'antd-mobile-demo-data'
+
+ class AppForm extends React.Component {
+  componentWillMount() {
+    initialFormComponent(this)
+  }
+  
+  submit() {
+    console.log(this.form.values)  
+  }
+  
+  render() {
+   return (
+     <div className="App">
+      <PickerItem label="Select District" data={district} field="district" {...this.form}/>
+      <Button onClick={()=>this.submit()}>Submit</Button>
+     </div>
+    ) 
+  }
+ }
+ export default createForm()(AppForm)
+```
  - `NavBar` **class** Render the NavBar component for header based on antd-mobile.
  ####
  | props | type | description | required | example |
