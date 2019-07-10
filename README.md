@@ -89,7 +89,7 @@ render({
  import React from 'react'
  import { createForm } from 'rc-form'
  import { Button } from 'antd-mobile'
- import { PickerItem } from 'm2-antd/mobile' /* 待发布(可用其他空间代替) */
+ import { PickerItem } from 'm2-antd/mobile' /* 待发布(可用其他组件代替) */
  import { initialFormComponent } from 'm2-react'
  import { district } from 'antd-mobile-demo-data'
 
@@ -111,6 +111,7 @@ render({
     ) 
   }
  }
+ 
  export default createForm()(AppForm)
 ```
  - `NavBar` **class** Render the NavBar component for header based on antd-mobile.
