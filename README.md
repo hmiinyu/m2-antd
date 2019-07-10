@@ -107,7 +107,7 @@ render({
  | colors | object | the tabbar color configuration | no |  |
 ```js
  import React from 'react'
- import { DataUtil } from 'm2-core'
+ import { Mysql } from 'm2-core'
  import { TabBar } from 'm2-antd/moible'
  
  export default () => {
@@ -123,7 +123,7 @@ render({
     { title: '任务', url: '/task', icon: 'task.png', selectedIcon: 'task_selected.png' },
     { title: '项目', url: '/project', icon: 'project.png', selectedIcon: 'project_selected.png' },
     { title: '我的', url: '/profile', icon: 'profile.png', selectedIcon: 'profile_selected.png' }
-  ].map(item => ({ ...item, key: DataUtil.randomString(5)}))
+  ].map(item => ({ ...item, key: Mysql.randomString(5)}))
   
   return (
     <>
